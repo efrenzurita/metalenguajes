@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Horario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+    th {
+      background: #343a40;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    .materia {
+      font-weight: bold;
+      color: #0077b6;
+    }
+    .actividad {
+      color: #e85d04;
+    }
+    .libre {
+      color: #6c757d;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Horario Semanal</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Hora</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>7:00 - 8:00</td>
+        <td class="actividad" rowspan="2">Almorzar y alistarme en casa</td>
+        <td class="materia" rowspan="2">Programación de Base de Datos</td>
+        <td class="actividad" rowspan="2">Almorzar y alistarme en casa</td>
+        <td class="materia" rowspan="2">Programación de Base de Datos</td>
+        <td class="actividad">Trabajar</td>
+        <td class="libre">Libre</td>
+        <td class="libre">Libre</td>
+      </tr>
+      <tr>
+        <td>8:00 - 9:00</td>
+        <td class="actividad">Trabajar</td>
+        <td class="actividad">Trabajar</td>
+        <td class="libre">Libre</td>
+      </tr>
+      <tr>
+        <td>9:00 - 10:00</td>
+        <td class="materia" rowspan="2">Integración de Textos Académicos en Inglés</td>
+        <td class="materia" rowspan="2">Transformación Digital</td>
+        <td class="materia" rowspan="2">Integración de Textos Académicos en Inglés</td>
+        <td class="materia" rowspan="2">Transformación Digital</td>
+        <td class="actividad">Trabajar</td>
+        <td class="actividad" rowspan="6">Trabajar</td>
+        <td class="libre">Libre</td>
+      </tr>
+      <tr>
+        <td>10:00 - 11:00</td>
+        <td class="actividad">Trabajar</td>
+        <td class="actividad">Misa</td>
+      </tr>
+      <tr>
+        <td>11:00 - 12:00</td>
+        <td class="materia" rowspan="2">Investigación de Operaciones</td>
+        <td class="materia" rowspan="2">Redes de Comunicación</td>
+        <td class="materia" rowspan="2">Investigación de Operaciones</td>
+        <td class="materia" rowspan="2">Redes de Comunicación</td>
+        <td class="actividad">Trabajar</td>
+        <td class="libre" rowspan="9">Libre</td>
+      </tr>
+      <tr>
+        <td>12:00 - 13:00</td>
+        <td class="actividad">Trabajar</td>
+      </tr>
+      <tr>
+        <td>13:00 - 14:00</td>
+        <td class="materia" rowspan="2">Diseño de Interfaz de Usuario</td>
+        <td class="actividad">Comer</td>
+        <td class="materia" rowspan="2">Diseño de Interfaz de Usuario</td>
+        <td class="actividad">Comer</td>
+        <td class="actividad">Comer</td>
+      </tr>
+      <tr>
+        <td>14:00 - 15:00</td>
+        <td class="actividad">Trabajar</td>
+        <td class="actividad">Bañarme</td>
+        <td class="actividad">Trabajar</td>
+
+      </tr>
+      <tr>
+        <td>15:00 - 16:00</td>
+        <td class="materia" rowspan="2">Metalenguajes</td>
+        <td class="actividad">Hacer tarea</td>
+        <td class="materia" rowspan="2">Metalenguajes</td>
+        <td class="actividad">Libre</td>
+        <td class="actividad">Trabajar</td>
+      </tr>
+      <tr>
+        <td>16:00 - 17:00</td>
+        <td class="actividad">Libre</td>
+        <td class="actividad">Libre</td>
+        <td class="actividad">Trabajar</td>
+      </tr>
+      <tr>
+        <td>17:00 - 18:00</td>
+        <td class="materia">Sostenibilidad y Responsabilidad Social</td>
+        <td class="actividad">Libre</td>
+        <td class="materia">Sostenibilidad y Responsabilidad Social</td>
+        <td class="actividad">Libre</td>
+        <td class="actividad">Trabajar</td>
+      </tr>
+      <tr>
+        <td>18:00 - 19:00</td>
+        <td class="actividad">Libre</td>
+        <td class="actividad">Libre</td>
+        <td class="actividad">Libre</td>
+        <td class="actividad">Libre</td>
+        <td class="actividad">Libre</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
