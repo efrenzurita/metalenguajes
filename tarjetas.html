@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjetas Apiladas</title>
+  <style>
+    /* Centrar y limitar ancho del contenedor principal */
+    main {
+      max-width: 720px;
+      margin-inline: auto;
+      padding: 1rem;
+    }
+
+    /* Layout en columna con separación entre tarjetas */
+    .cards {
+      display: grid;
+      gap: 1rem;
+    }
+
+    /* Estilo de cada tarjeta individual */
+    .card {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px; /* opcional */
+      background-color: #f9f9f9; /* opcional */
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Título de la sección</h1>
+    <section class="cards">
+      <article class="card">Tarjeta 1</article>
+      <article class="card">Tarjeta 2</article>
+      <article class="card">Tarjeta 3</article>
+    </section>
+  </main>
+</body>
+</html>
