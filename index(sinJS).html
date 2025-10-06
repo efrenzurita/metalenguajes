@@ -1,15 +1,103 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cargar JSON Local</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 2rem;
+        }
+
+        #out {
+            white-space: pre-wrap;
+            border: 1px solid #f3a0a0;
+            padding: 1rem;
+            border-radius: .5rem;
+        }
+
+        pre {
+            background-color: black;
+            color: rgb(34, 211, 11);
+        }
+        table {
+            border: 1px solid black;
+        }
+        td{
+            border: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Cargar y Mostrar JSON</h1>
-    <input type="file" id="fileInput" accept=".json">
-    <pre id="output"></pre>
-    <script src="script.js"></script>
+    <h1>Cargar el archivo de texto</h1>
+    <input id="file" type="file" accept=".json">
+    <button id="show" type="button">Mostrar</button>
+
+    <h2>Contenido</h2>
+    <pre id="out">-aún no hay contenido-</pre>
+    <div id="table-container" aria-live="polite"></div>
+
+<script>
+    const input = document.getElementById('file');
+    const out = document.getElementById('out');
+    const tableContainer = document.getElementById('table-container');
+
+    document.getElementById('show').addEventListener('click', async () => {
+        const f = input.files?.[0];
+        if (!f) {
+            out.textContent = 'Primero elige un archivo .json';
+            return;
+        }
+
+        const text = await f.text();
+
+        let data;
+        try {
+            data = JSON.parse(text);
+        } catch (error) {
+            out.textContent = "Error: archivo JSON inválido";
+            return;
+        }
+
+        out.textContent = JSON.stringify(data, null, 2);
+
+        tableContainer.innerHTML = "";
+
+        if (!Array.isArray(data)) {
+            data = [data];
+        }
+
+        const table = document.createElement("table");
+        const thead = document.createElement("thead");
+        const tbody = document.createElement("tbody");
+
+        const columnas = Object.keys(data[0] || {});
+        const trHead = document.createElement("tr");
+
+        columnas.forEach(col => {
+            const th = document.createElement("th");
+            th.textContent = col;
+            trHead.appendChild(th);
+        });
+
+        thead.appendChild(trHead);
+        table.appendChild(thead);
+
+        data.forEach(item => {
+            const tr = document.createElement("tr");
+            columnas.forEach(col => {
+                const td = document.createElement("td");
+                td.textContent = item[col];
+                tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+        });
+
+        table.appendChild(tbody);
+        tableContainer.appendChild(table);
+    });
+</script>
 </body>
 </html>
-
