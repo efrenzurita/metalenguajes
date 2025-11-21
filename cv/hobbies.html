@@ -1,25 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
+    <title>CV - Hobbies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <style>
         .navbar-object {
             width: 100%;
-            height: 60px;
+            height: 70px;
             border: none;
-            margin-bottom: 20px;
+            display: block;
+        }
+        .card:hover {
+            transform: scale(1.03);
+            transition: 0.3s;
+            cursor: default;
         }
     </style>
 </head>
 <body>
-  <object
-    data="navbar.html"
-    type="text/html"
-    title="Barra de navegación"
-    class="navbar-object">
-  </object>
-  <main> HOBBIES </main>
+  <object data="navbar.html" type="text/html" class="navbar-object shadow-sm mb-4"></object>
+
+  <main class="container">
+      <h2 class="mb-4 text-success border-bottom pb-2">Mis Hobbies</h2>
+      
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 shadow-sm border-primary">
+              <div class="card-header bg-primary text-white">Videojuegos</div>
+              <div class="card-body">
+                <p class="card-text">Me apasiona jugar videojuegos en mis tiempos libres.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card h-100 shadow-sm border-danger">
+              <div class="card-header bg-danger text-white">Música</div>
+              <div class="card-body">
+                <p class="card-text">Disfruto escuchar música, principalmente:</p>
+                <ul>
+                    <li>Regional Mexicano</li>
+                    <li>Rap</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card h-100 shadow-sm border-warning">
+              <div class="card-header bg-warning text-dark">Deporte</div>
+              <div class="card-body">
+                <p class="card-text">Ir al gimnasio para mantenerme activo y saludable.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
